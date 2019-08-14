@@ -5,10 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Locale;
 
-/**
- * Hello world!
- *
- */
+/** 
+ * @author Santiago Rocha 
+*/
+
 public class App 
 {
     public static void main( String[] args ) throws IOException
@@ -24,6 +24,11 @@ public class App
         
     }
 
+    /**
+     * Metodo que calcula la media de los numeros en una lista encadenada
+     * @param lk lista de numeros 
+     * @return la media de los numeros en la lista 
+     */
     public static double mean(LinkedList lk){
         Node pointer = lk.getFirst();
         double m = 0;
@@ -34,6 +39,11 @@ public class App
         return m/lk.getSize();
     }
 
+    /**
+     * Metodo que calcula la desviacion estandar de los numeros en una lista encadenada
+     * @param lk lista de numeros
+     * @return la desviacion estandar de los numeros en la lista 
+     */
     public static double standardDeviation(LinkedList lk){
         double mean =  mean(lk);
         Node pointer = lk.getFirst();

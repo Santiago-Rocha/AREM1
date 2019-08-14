@@ -1,9 +1,9 @@
 package edu.escuelaing.arem;
 
-/**
- * Hello world!
- *
- */
+/** 
+ * @author Santiago Rocha 
+*/
+
 public class LinkedList {
     private Head head;
     private int size;
@@ -12,6 +12,10 @@ public class LinkedList {
         head = new Head(null, null);
     }
 
+    /**
+     * Metodo que agrega un nuevo nodo a la lista
+     * @param num define el valor del nodo que se va a agregar
+     */
     public void add(double num) {
         Node node = new Node(num, null);
         if (head.getFirst() == null)
@@ -27,7 +31,7 @@ public class LinkedList {
         head.setLast(node);
 
     }
-
+    
     public String toString() {
         StringBuilder sb = new StringBuilder();
         Node pointer = head.getFirst();

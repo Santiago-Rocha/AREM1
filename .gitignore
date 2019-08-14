@@ -1,7 +1,7 @@
 # TODO: Copiar los ontenidos de https://github.com/github/gitignore/blob/master/Java.gitignore 
 # Ignora todos los archivos en el directorio target en los proyectos creados con maven
 target/
-.classpath/
-.project/
+.classpath
+.project
 .settings/
 bin/
