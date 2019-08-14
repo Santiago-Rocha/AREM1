@@ -2,9 +2,9 @@ package edu.escuelaing.arem;
 
 public class Node {
     private Node next;
-    private int data;
+    private double data;
 
-    public Node(int data, Node next) {
+    public Node(double data, Node next) {
         this.data = data;
         this.next = next;
     }
@@ -17,7 +17,7 @@ public class Node {
         this.next = node;
     }
 
-    public int geData() {
+    public double geData() {
         return data;
     }
 }

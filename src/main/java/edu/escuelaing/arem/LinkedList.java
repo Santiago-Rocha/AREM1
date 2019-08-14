@@ -6,12 +6,13 @@ package edu.escuelaing.arem;
  */
 public class LinkedList {
     private Head head;
+    private int size;
 
     public LinkedList() {
         head = new Head(null, null);
     }
 
-    public void add(int num) {
+    public void add(double num) {
         Node node = new Node(num, null);
         if (head.getFirst() == null)
             head.setFirst(node);
@@ -22,6 +23,7 @@ public class LinkedList {
             }
             pointer.setNext(node);
         }
+        size++;
         head.setLast(node);
 
     }
@@ -36,5 +38,15 @@ public class LinkedList {
         return sb.toString().trim();
 
     }
+
+    public int  getSize(){
+        return size;
+    }
+
+    public Node getFirst(){
+        return head.getFirst();
+    }
+
+
 
 }
