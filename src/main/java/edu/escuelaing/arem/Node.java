@@ -4,9 +4,9 @@ package edu.escuelaing.arem;
  * @author Santiago Rocha
  */
 
-public class Node {
-    private Node next;
-    private double data;
+public class Node<T> {
+    private Node<T> next;
+    private T data;
 
     /**
      * Constructor para los nodos que formas parte de la lista
@@ -15,20 +15,20 @@ public class Node {
      * @param next define el siguiente nodo en la lista, si es nulo este es el
      *             ultimo elemento
      */
-    public Node(double data, Node next) {
+    public Node(T data, Node<T> next) {
         this.data = data;
         this.next = next;
     }
 
-    public Node nextNode() {
+    public Node<T> nextNode() {
         return next;
     }
 
-    public void setNext(Node node) {
+    public void setNext(Node<T> node) {
         this.next = node;
     }
 
-    public double geData() {
+    public T geData() {
         return data;
     }
 }
