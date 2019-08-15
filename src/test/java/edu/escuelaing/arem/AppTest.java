@@ -24,18 +24,18 @@ public class AppTest{
 
     @Test
     public void meanTest2() throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("test1.txt"));
+        BufferedReader br = new BufferedReader(new FileReader("test2.txt"));
         String line = null;
         LinkedList<Double> lk = new LinkedList<Double>();
         while ((line = br.readLine()) != null) {
             lk.add(Double.parseDouble(line));
         }
         Double value = App.mean(lk);
-        assertEquals(String.format(Locale.US, "%.2f", value),"550.60");
+        assertEquals(String.format(Locale.US, "%.2f", value),"60.32");
     }
 
     @Test
-    public void standardDeviationTest() throws IOException{
+    public void standardDeviationTest1() throws IOException{
         BufferedReader br = new BufferedReader(new FileReader("test1.txt"));
         String line = null;
         LinkedList<Double> lk = new LinkedList<Double>();
@@ -44,6 +44,18 @@ public class AppTest{
         }
         Double value = App.standardDeviation(lk);
         assertEquals(String.format(Locale.US, "%.2f", value),"572.03");
+    }
+
+    @Test
+    public void standardDeviationTest2() throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader("test2.txt"));
+        String line = null;
+        LinkedList<Double> lk = new LinkedList<Double>();
+        while((line = br.readLine()) != null){
+            lk.add(Double.parseDouble(line));
+        }
+        Double value = App.standardDeviation(lk);
+        assertEquals(String.format(Locale.US, "%.2f", value),"62.26");
     }
 
 
