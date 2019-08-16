@@ -13,44 +13,44 @@ public class App
 {
     public static void main( String[] args ) throws IOException
     {
-        BufferedReader br = new BufferedReader(new FileReader("test2.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("test2.txt"));
         String line = null;
-        LinkedList<Double> lk = new LinkedList<Double>();
-        while((line = br.readLine()) != null){
-            lk.add(Double.parseDouble(line));
+        LinkedList<Double> linkedList = new LinkedList<Double>();
+        while((line = bufferedReader.readLine()) != null){
+            linkedList.add(Double.parseDouble(line));
         }
-        System.out.printf(Locale.US,"%.2f\n",mean(lk));
-        System.out.printf(Locale.US,"%.2f\n",standardDeviation(lk));
+        System.out.printf(Locale.US,"%.2f\n",mean(linkedList));
+        System.out.printf(Locale.US,"%.2f\n",standardDeviation(linkedList));
     }
 
     /**
      * Metodo que calcula la media de los numeros en una lista encadenada
-     * @param lk lista de numeros 
+     * @param linkedList lista de numeros 
      * @return la media de los numeros en la lista 
      */
-    public static double mean(LinkedList<Double> lk){
-        Node<Double> pointer = lk.getFirst();
-        double m = 0;
+    public static double mean(LinkedList<Double> linkedList){
+        Node<Double> pointer = linkedList.getFirst();
+        double mean = 0;
         while (pointer != null) {
-            m+= pointer.geData();
+            mean+= pointer.geData();
             pointer = pointer.nextNode();
         }
-        return m/lk.getSize();
+        return mean/linkedList.getSize();
     }
 
     /**
      * Metodo que calcula la desviacion estandar de los numeros en una lista encadenada
-     * @param lk lista de numeros
+     * @param linkedList lista de numeros
      * @return la desviacion estandar de los numeros en la lista 
      */
-    public static double standardDeviation(LinkedList<Double> lk){
-        double mean =  mean(lk);
-        Node<Double> pointer = lk.getFirst();
-        double sd = 0;
+    public static double standardDeviation(LinkedList<Double> linkedList){
+        double mean =  mean(linkedList);
+        Node<Double> pointer = linkedList.getFirst();
+        double stdDev = 0;
         while (pointer != null) {
-            sd+= Math.pow(pointer.geData() - mean,2);
+            stdDev+= Math.pow(pointer.geData() - mean,2);
             pointer = pointer.nextNode();
         }
-        return Math.sqrt(sd/(lk.getSize()-1));
+        return Math.sqrt(stdDev/(linkedList.getSize()-1));
     }
 }

@@ -33,13 +33,13 @@ public class LinkedList<T> {
     }
     
     public String toString() {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         Node<T> pointer = head.getFirst();
         while (pointer != null) {
-            sb.append(pointer.geData()).append(" ");
+            stringBuilder.append(pointer.geData()).append(" ");
             pointer = pointer.nextNode();
         }
-        return sb.toString().trim();
+        return stringBuilder.toString().trim();
 
     }
 
