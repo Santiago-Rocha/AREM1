@@ -39,11 +39,11 @@ mvn test
 ```
 mvn javadoc:jar
 ```
+La documentación generada por el comando anterior se encuentra en la ruta **target\apidocs**
 ### Ejecutar
 ```
 java -cp target\psp0-1.0-SNAPSHOT.jar edu.escuelaing.arem.App
 ```
-La documentación generada por el comando anterior se encuentra en la ruta **target\site\apidocs**
 ## Autor 
 Santiago Rocha Durán - Escuela Colombiana de Ingenieria Julio Garavito
 ## Licencia
